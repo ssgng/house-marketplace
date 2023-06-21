@@ -21,7 +21,7 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
           <p className='categoryListingName'>{listing.name}</p>
 
           <p className='categoryListingPrice'>
-            $
+            
             {listing.offer
               ? listing.discountedPrice
                   .toString()
@@ -29,7 +29,7 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
               : listing.regularPrice
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            {listing.type === 'rent' && ' / Month'}
+            {listing.type === 'rent' && ' / Month'} €
           </p>
           <div className='categoryListingInfoDiv'>
             <img src={bedIcon} alt='bed' />
